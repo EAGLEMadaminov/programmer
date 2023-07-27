@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
 import { AiOutlineLeft } from "react-icons/ai";
@@ -63,17 +63,17 @@ function ProductSlider() {
   };
 
   const gotoNext = () => {
-    customeSlider.currentTarget.slickNext();
+    customeSlider?.current?.slickNext();
   };
 
   const gotoPrev = () => {
-    customeSlider.currentTarget.slickPrev();
+    customeSlider?.current?.slickPrev();
   };
   return (
     <div className="relative lg:w-[1000px] md:w-[800px] ">
       <button
         onClick={() => gotoPrev()}
-        className="border z-[1] bg-white md:left-[50px] ml-[20px] mt-[90px] lg:ml-0 text-[12px] absolute text-[#0677E1] mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-[#0677E1] hover:to-[#8C1FE2]"
+        className="border z-[1] bg-white md:left-[50px] ml-[20px] mt-[90px] lg:ml-5 text-[12px] absolute text-[#0677E1] mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-[#0677E1] hover:to-[#8C1FE2]"
       >
         <AiOutlineLeft className="ml-[14px] " />
       </button>

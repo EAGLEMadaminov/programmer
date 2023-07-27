@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { HiChevronDown } from "react-icons/hi";
 
 function Accordion() {
