@@ -2,7 +2,30 @@ import React from "react";
 import { HiChevronDown } from "react-icons/hi";
 
 function Accordion() {
-  let array = [0, 1, 2, 3, 4, 5, 6];
+  let array = [
+    {
+      id: 1,
+      title: "Qanday qilib biznesni aftomatlashtirsa bo’ladi?",
+      text: "Birinchi navbatda biznesingizni yana bir bor ko’rib chiqing, qaysi qismni odam aralashuvsiz amalga oshirish mumkin? Bunda biz sizga yordam berishimiz mumkin.",
+    },
+    {
+      id: 2,
+      title: "Biznesimga web site yasashim kerakmi?",
+      text: "Biznesingiz haqida to’liqroq ma’lumot bering biz sizga sifatli va hamyonbop narxda qilib beramiz",
+    },
+    {
+      id: 3,
+      title:
+        "Play marketdagi dasturimni odamlar yuklasa menga pul tushub turadimi?",
+      text: "Yo’q , dasturingiz ichidagi har xil reklamalar orqali daromad ko’rishingiz mumkin. Va shu bilan birga pulli kontentlar quyishingiz orqali daromad ko’rishingiz mumkin.",
+    },
+    {
+      id: 4,
+      title: "Dastur o’rtacha qancha vaqtda tayyor bo’ladi?",
+      text: "Dasturning murakkabligiga qarab har xil vaqt oladi. O’rtacha 2 haftadan 3 oy atrofida",
+    },
+  ];
+  
   return (
     <div>
       {" "}
@@ -23,18 +46,9 @@ function Accordion() {
               >
                 <HiChevronDown className="ml-[7px] mt-1  " />
               </button>
-              <h3 className="text-[20px] w-[350px] md:w-auto">
-                Lorem Ipsum is simply dummy text of the printing
-              </h3>
+              <h3 className="text-[20px] w-[350px] md:w-auto">{item.title}</h3>
             </div>
-            <p className="p-3  ml-10 hidden">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
+            <p className="p-3  ml-10 hidden">{item.text}</p>
           </div>
         );
       })}

@@ -2,8 +2,11 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
 import { AiOutlineLeft } from "react-icons/ai";
-import uzum from "../pages/images/uzum.png";
-import car from "../pages/images/car.png";
+import Geo from "../pages/images/photo_g.jpg";
+import One from "../pages/images/photo1.jpg";
+import Clear from "../pages/images/photo_toza.jpg";
+import Vite from "../pages/images/photo_vite.jpg";
+import Daryo from "../pages/images/image_d.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -11,12 +14,11 @@ import Slider from "react-slick";
 function ProductSlider() {
   const customeSlider = useRef();
   const sliderItems = [
-    { id: 1, image: uzum },
-    { id: 2, image: car },
-    { id: 3, image: car },
-    { id: 4, image: car },
-    { id: 5, image: car },
-    { id: 6, image: car },
+    { id: 1, image: Geo },
+    { id: 2, image: One },
+    { id: 3, image: Clear },
+    { id: 4, image: Vite },
+    { id: 5, image: Daryo },
   ];
   let settings = {
     dots: true,
@@ -26,6 +28,7 @@ function ProductSlider() {
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
+    className: "notes-slider",
     responsive: [
       {
         breakpoint: 1024,
@@ -86,7 +89,11 @@ function ProductSlider() {
           return (
             <div key={item.id} className="flex mx-3 justify-between mt-8 ">
               <div className="flex justify-center items-center bg-white w-[210px] h-[150px] border rounded-[18px] mx-2">
-                <Image src={item.image} alt="uzum foto" />
+                <Image
+                  src={item.image}
+                  alt="uzum foto"
+                  className="w-[210px] h-[150px] rounded-[18px]"
+                />
               </div>
             </div>
           );

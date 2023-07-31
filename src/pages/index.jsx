@@ -4,16 +4,12 @@ import Logo from "./images/Logo.png";
 import PortFolio1 from "./images/portfolio1.png";
 import portfoli2 from "./images/portfolio2.png";
 import maket3 from "./images/maket3.png";
-import statistika from "./images/statistika.png";
-import statistika2 from "./images/statistika2.png";
 import bot from "./images/Telegram.png";
 import crm from "./images/crm.png";
 import phone from "./images/phone.png";
 import dizayn from "./images/dizayn.png";
 import graf from "./images/graf.png";
 import saytlar from "./images/sayt-logo.png";
-import { AiOutlineLeft } from "react-icons/ai";
-import { AiOutlineRight } from "react-icons/ai";
 import { MdOutlinePhone } from "react-icons/md";
 import Goal from "./images/business-goal.png";
 import Tools from "./images/repair-tool.png";
@@ -21,6 +17,7 @@ import Slider from "../components/Slider";
 import Modal from "@/components/modal";
 import { useGlobalContext } from "../context";
 import Accordion from "@/components/Accordion";
+import PortfolioSlider from "@/components/PortfolioSlider";
 
 export default function Home() {
   const { showModal, setShowModal } = useGlobalContext();
@@ -34,7 +31,7 @@ export default function Home() {
       </Head>
       <div className="w-[300px] md:w-[800px] lg:w-[1000px] mx-auto pt-5">
         <div className="flex border  border-[#D7E0E8] rounded-[30px] sm:items-center p-2">
-          <Image src={Logo} alt=",.," width={100} height={100} className="" />
+          <Image src={Logo} alt="logo img" />
           <ul className="lg:flex mx-auto text-[17px] md:flex hidden m-0">
             <li className="mx-[20px] ">
               <a className=" text-black" href="#portfolio">
@@ -57,7 +54,7 @@ export default function Home() {
             className="ml-7 sm:ml-0 flex items-center sm:mr-4 text-[12px] sm:text-[16px]"
           >
             <MdOutlinePhone className="mr-3" />
-            <p className="m-0">+998 97 628 28 82</p>
+            <p className="m-0">+998 91 339 99 00</p>
           </button>
         </div>
         <div className="mx-auto text-center mt-10">
@@ -128,49 +125,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="border bg-white rounded-[32px] flex w-[350px] md:w-[600px] lg:w-[1000px] flex-wrap mx-auto mt-20 justify-between ">
-          <div className="sm:w-[450px] ml-[70px] sm:mt-[70px] mt-[40px]">
-            <p className="uppercase font-[700]">
-              Bizning{" "}
-              <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
-                portfolio
-              </span>
-            </p>
-            <h2 className="text-[25px] sm:text-[32px] font-[700]">
-              Lorem Ipsum is simply
-            </h2>
-            <p className="mt-7 w-[280px] sm:w-auto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s,
-            </p>
-            <div className="flex justify-between mt-8 flex-wrap  sm:flex-auto">
-              <button className="flex ml-5 w-[350px] text-center sm:w-auto  font-[600] items-center rounded-xl bg-[#F0F4F8] py-[14px] px-5 bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
-                Loyihani ko&apos;rish{" "}
-                <AiOutlineRight className="text-[12px] ml-2 text-[#8C1FE2]" />
-              </button>
-              <div className="text-center ml-[60px] sm:ml-0 sm:mr-0">
-                <button className="text-[12px] mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700">
-                  <AiOutlineLeft className="ml-[14px]" />
-                </button>
-                <button className="text-[12px] hover:text-white text-center w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700">
-                  <AiOutlineRight className="ml-[14px]  font-bold" />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="flex sm:mt-8 mb-5 sm:mb-0 ml-4">
-            <Image
-              src={statistika}
-              alt="statistika"
-              className="w-[330px] sm:w-[400px] md:w-[600px] z-[2] mt-6 lg:w-[400px]"
-            />
-            <Image
-              src={statistika2}
-              alt="statistika2"
-              className="absolute w-[330px]  sm:w-[400px] md:w-[580px] lg:w-[400px]"
-            />
-          </div>
+        <div className="mt-10 w-[1000px] mx-auto">
+          <PortfolioSlider />
         </div>
       </section>
       <section className="bg-white rounded-[40px] mt-20 " id="services">
@@ -260,10 +216,10 @@ export default function Home() {
               ko&apos;ring!
             </span>{" "}
           </h2>
-          <p className="text-center px-7 my-6">
-            Biznesingizni keyingi bosqichga olib chiqish yoki
-            g&apos;oyalaringizni biznesga aylantirish haqida
-            qayg&apos;uryapsizmi?
+          <p>O&apos;ylab o&apos;tirishga vaqt yo&apos;q!</p>
+          <p className="text-center px-7 my-2">
+            Hoziroq biznesingizni keyingi bosqichga olib chiqing yoki o&apos;z
+            g&apos;oyalaringizni biznesga aylantiring!
           </p>
           <button
             onClick={() => setShowModal(true)}
@@ -283,7 +239,7 @@ export default function Home() {
           type="tell"
           className="flex items-center ml-[70px] sm:ml-0 md:mr-10"
         >
-          <MdOutlinePhone className="mr-3 text-center" /> +998 97 628 28 82
+          <MdOutlinePhone className="mr-3 text-center" /> +998 91 339 99 00
         </button>
       </div>
     </div>
