@@ -31,7 +31,7 @@ export default function Home() {
       </Head>
       <div className="w-[300px] md:w-[800px] lg:w-[1000px] mx-auto pt-5">
         <div className="flex border  border-[#D7E0E8] rounded-[30px] sm:items-center p-2">
-          <Image src={Logo} alt="logo img" />
+          <Image src={Logo} alt="logo img" className="w-[100px] md:w-auto" />
           <ul className="lg:flex mx-auto text-[17px] md:flex hidden m-0">
             <li className="mx-[20px] ">
               <a className=" text-black" href="#portfolio">
