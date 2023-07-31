@@ -76,14 +76,14 @@ function PortfolioSlider() {
               key={item.id}
               className=" projects-slider mx-auto rounded-[32px]"
             >
-              <div className="sm:w-[450px] text-center sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
+              <div className="sm:w-[450px] text-center  sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
                 <p className="uppercase font-[700]">
                   Bizning
                   <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
                     portfolio
                   </span>
                 </p>
-                <h2 className="text-[25px] w-[300px] md:w-auto  sm:text-[32px] font-[700] leading-8">
+                <h2 className="text-[25px] w-[300px] md:w-auto  mt-2 sm:text-[32px] font-[700] leading-8">
                   {item.title}
                 </h2>
                 <div className="flex">
@@ -94,13 +94,13 @@ function PortfolioSlider() {
                   {item.parag}
                 </p>
                 <div className="flex justify-between mt-8 flex-wrap  sm:flex-auto">
-                  <button className="flex ml-5 w-[350px]  text-center sm:w-auto  font-[600] items-center rounded-xl bg-[#F0F4F8] py-[14px] px-5 bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
+                  <button className="flex ml-20 sm:ml-5 w-[350px]  text-center sm:w-auto  font-[600] items-center rounded-xl bg-[#F0F4F8] py-[14px] px-5 bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
                     <a href={item.link} target="blank">
                       Loyihani ko&apos;rish
                     </a>
                     <AiOutlineRight className="text-[12px] ml-2 text-[#8C1FE2]" />
                   </button>
-                  <div className="text-center ml-[60px] sm:ml-0 sm:mr-0">
+                  <div className="text-center ml-[120px] sm:ml-0 sm:mr-0">
                     <button
                       className="text-[12px] mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700"
                       onClick={() => gotoPrevBtn()}
