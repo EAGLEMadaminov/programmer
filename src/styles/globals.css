@@ -10,6 +10,7 @@
   .projects-slider {
     display: flex !important;
     flex-wrap: wrap !important;
+    margin: 0px 15px !important;
   }
 }
 :root {

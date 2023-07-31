@@ -72,24 +72,29 @@ function PortfolioSlider() {
       >
         {projects.map((item) => {
           return (
-            <div key={item.id} className=" projects-slider mx-auto rounded-[32px]">
-              <div className="sm:w-[450px] ml-[70px] sm:mt-[70px] mt-[40px]">
+            <div
+              key={item.id}
+              className=" projects-slider mx-auto rounded-[32px]"
+            >
+              <div className="sm:w-[450px] text-center sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
                 <p className="uppercase font-[700]">
                   Bizning
                   <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
                     portfolio
                   </span>
                 </p>
-                <h2 className="text-[25px]  sm:text-[32px] font-[700] leading-8">
+                <h2 className="text-[25px] w-[300px] md:w-auto  sm:text-[32px] font-[700] leading-8">
                   {item.title}
                 </h2>
                 <div className="flex">
-                  <Image src={komp} alt="comp img" className="w-8 h-8 mt-2" />
+                  <Image src={komp} alt="comp img" className="w-8 h-8 mt-2 " />
                   <p className="mt-4"> Bizning rolimiz</p>
                 </div>
-                <p className="mt-3 w-[280px] sm:w-auto">{item.parag}</p>
+                <p className="mt-3 w-[280px] text-center sm:text-left sm:w-auto">
+                  {item.parag}
+                </p>
                 <div className="flex justify-between mt-8 flex-wrap  sm:flex-auto">
-                  <button className="flex ml-5 w-[350px] text-center sm:w-auto  font-[600] items-center rounded-xl bg-[#F0F4F8] py-[14px] px-5 bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
+                  <button className="flex ml-5 w-[350px]  text-center sm:w-auto  font-[600] items-center rounded-xl bg-[#F0F4F8] py-[14px] px-5 bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
                     <a href={item.link} target="blank">
                       Loyihani ko&apos;rish
                     </a>
@@ -115,7 +120,7 @@ function PortfolioSlider() {
                 <Image
                   src={item.image}
                   alt="statistika"
-                  className="w-[330px] sm:w-[400px] md:w-[600px] md:ml-5  z-[2] mt-6 lg:w-[400px] h-[300px]"
+                  className="w-[250px] h-[150px] sm:w-[400px] md:w-[600px] md:ml-5  z-[2] mt-6 lg:w-[400px] sm:h-[300px]"
                 />
               </div>
             </div>
