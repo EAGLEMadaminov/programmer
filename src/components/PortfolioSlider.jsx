@@ -65,13 +65,14 @@ function PortfolioSlider() {
   };
   return (
     <div>
-      <Slider {...settings} ref={projectsSlider}>
+      <Slider
+        {...settings}
+        ref={projectsSlider}
+        className="border rounded-[32px] bg-white w-[350px] md:w-[600px] lg:w-[1000px]"
+      >
         {projects.map((item) => {
           return (
-            <div
-              key={item.id}
-              className="flex projects-slider mx-auto flex-wrap border bg-white rounded-[32px] w-[350px] md:w-[600px] lg:w-[1000px] "
-            >
+            <div key={item.id} className=" projects-slider mx-auto rounded-[32px]">
               <div className="sm:w-[450px] ml-[70px] sm:mt-[70px] mt-[40px]">
                 <p className="uppercase font-[700]">
                   Bizning
