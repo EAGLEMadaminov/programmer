@@ -78,14 +78,14 @@ function PortfolioSlider() {
               key={item.id}
               className=" projects-slider mx-auto rounded-[32px]"
             >
-              <div className="sm:w-[450px] text-center  sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
-                <p className="uppercase font-[700]">
+              <div className="sm:w-[450px]   sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
+                <p className="uppercase font-[700] ml-[50px] sm:ml-auto">
                   Bizning
                   <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
                     portfolio
                   </span>
                 </p>
-                <h2 className="text-[25px] w-[300px] md:w-auto  mt-2 sm:text-[32px] font-[700] leading-8">
+                <h2 className="text-[25px] w-[300px] md:w-auto text-center mt-2 sm:text-[32px] font-[700] leading-8">
                   {item.title}
                 </h2>
                 <div className="flex">
