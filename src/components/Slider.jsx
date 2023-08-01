@@ -76,7 +76,7 @@ function ProductSlider() {
     <div className="relative lg:w-[1000px] md:w-[800px] ">
       <button
         onClick={() => gotoPrev()}
-        className="border z-[1] bg-white md:left-[50px] ml-[20px] mt-[90px] lg:ml-5 text-[12px] absolute text-[#0677E1] mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-[#0677E1] hover:to-[#8C1FE2]"
+        className="border z-[1] bg-white md:left-[50px] ml-[20px] mt-[75px] lg:ml-5 text-[12px] absolute text-[#0677E1] mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-[#0677E1] hover:to-[#8C1FE2]"
       >
         <AiOutlineLeft className="ml-[14px] " />
       </button>
@@ -88,11 +88,11 @@ function ProductSlider() {
         {sliderItems.map((item) => {
           return (
             <div key={item.id} className="flex mx-3 justify-between mt-8 ">
-              <div className="flex justify-center items-center bg-white w-[210px] h-[150px] border rounded-[18px] mx-2">
+              <div className="flex justify-center items-center bg-white w-[180px] h-[120px] rounded-[18px] mx-2">
                 <Image
                   src={item.image}
                   alt="uzum foto"
-                  className="w-[120px] h-[80px] md:w-[210px] md:h-[150px] rounded-[18px]"
+                  className="w-[120px] h-[80px] md:w-[180px] md:h-[120px] rounded-[18px]"
                 />
               </div>
             </div>
@@ -101,7 +101,7 @@ function ProductSlider() {
       </Slider>
       <button
         onClick={() => gotoNext()}
-        className="border z-[1] bg-white  absolute right-[-20px] top-[90px] text-[12px] text-[#0677E1] mr-7  md:mr-2 lg:mr-0 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-[#0677E1] hover:to-[#8C1FE2]"
+        className="border z-[1] bg-white  absolute right-[5px] top-[75px] text-[12px] text-[#0677E1] mr-7  md:mr-2 lg:mr-0 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-[#0677E1] hover:to-[#8C1FE2]"
       >
         <AiOutlineRight className="ml-[14px]" />
       </button>

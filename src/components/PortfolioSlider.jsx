@@ -2,14 +2,12 @@ import React, { useRef } from "react";
 import { AiOutlineLeft } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 import komp from "../pages/images/simple-png.webp";
-import portfolio1 from "../pages/images/portfolio.jpg";
-import Project2 from "../pages/images/project2.jpg";
-import Project3 from "../pages/images/project3.jpg";
-import Project4 from "../pages/images/project4.jpg";
-import Image from "next/image";
+import project1 from "../pages/images/project.png";
+import project2 from "../pages/images/project-back.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Image from "next/image";
 
 function PortfolioSlider() {
   const projectsSlider = useRef();
@@ -30,21 +28,24 @@ function PortfolioSlider() {
         "Geo Go taksi ilovasi. Qulay hamda chiroyli dizaynga ega bo'lgan taksi platformasi.",
       parag: "Mobil dasturini ishlab chiqish.",
       link: "https://play.google.com/store/apps/details?id=io.geo.go",
-      image: portfolio1,
+      image: project1,
+      image2: project2,
     },
     {
       id: 2,
       title: "TozaUz Yurtimizni birga asraylik!!",
       parag: "Mobil dastur , Web Site ishlab chiqish.",
       link: "https://play.google.com/store/apps/details?id=uz.toza.tozauz",
-      image: Project2,
+      image: project1,
+      image2: project2,
     },
     {
       id: 3,
       title: "Vita in line sog'ligimzni birga asraylik!!",
       parag: "Mobil dastur , Web Site ishlab chiqish.",
       link: "https://play.google.com/store/apps/details?id=uz.hayot.vitaInLine&hl=ru&gl=US",
-      image: Project3,
+      image: project1,
+      image2: project2,
     },
     {
       id: 4,
@@ -52,7 +53,8 @@ function PortfolioSlider() {
         "Allone shahar ichi hamda shaharlar aro taksi xizmati uchun maxsuz ilova.",
       parag: "Mobil dasturini ishlab chiqish.",
       link: "https://play.google.com/store/apps/details?id=io.geo.go",
-      image: Project4,
+      image: project1,
+      image2: project2,
     },
   ];
 
@@ -116,11 +118,16 @@ function PortfolioSlider() {
                   </div>
                 </div>
               </div>
-              <div className="sm:mt-8  sm:mb-0 ml-4">
+              <div className="sm:mt-8  sm:mb-0 ml-4 relative">
+                <Image
+                  src={item.image2}
+                  alt="project 2"
+                  className="w-[250px]  h-[150px] sm:w-[400px] md:w-[600px] md:ml-12 mt-6 lg:w-[400px] sm:h-[320px]"
+                />
                 <Image
                   src={item.image}
                   alt="statistika"
-                  className="w-[250px] h-[150px] sm:w-[400px] md:w-[600px] md:ml-5  z-[2] mt-6 lg:w-[400px] sm:h-[300px]"
+                  className="absolute z-[1] right-0 top-8 md:top-12 w-[250px] lg:w-[400px]"
                 />
               </div>
             </div>
