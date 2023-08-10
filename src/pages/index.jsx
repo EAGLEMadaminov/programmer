@@ -131,8 +131,8 @@ export default function Home() {
           <PortfolioSlider />
         </div>
       </section>
-      <section className="bg-white rounded-[40px] mt-20 mb-20" id="services">
-        <div className="lg:w-[1000px] md:w-[800px ] mx-auto">
+      <section className="bg-white rounded-[40px] mt-20 mb-20 py-10" id="services">
+        <div className="lg:w-[1000px] md:w-[800px ] mx-auto ">
           <h1 className="text-center text-[30px] md:text-[40px] font-[700] dark:text-black ">
             Bizning{" "}
             <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">

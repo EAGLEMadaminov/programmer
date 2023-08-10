@@ -7,7 +7,7 @@ function Modal() {
   const { setShowModal } = useGlobalContext();
   const [sendForm, setSendFrom] = useState(false);
   return (
-    <div className="w-full z-[5] fixed top-0 right-0 left-0 bottom-0 bg-[#8294A5] h-[100vh]">
+    <div className="w-full z-[5] fixed top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.7)] h-[100vh]">
       {!sendForm ? (
         <div className="bg-white w-[400px] mt-[50px] rounded-[24px] p-10 mx-auto h-[500px]">
           <div className="flex justify-between">
@@ -35,7 +35,7 @@ function Modal() {
               placeholder="Ismingizni kiriting"
               className="rounded-xl border my-2 border-[#D7E0E8] outline-none w-full bg-[#F6F8FC] px-3 py-2"
             />
-            <label htmlFor="phone" >Telefon raqamingiz</label>
+            <label htmlFor="phone">Telefon raqamingiz</label>
             <div className=" my-2 flex rounded-xl border outline-none border-[#D7E0E8] w-full bg-[#F6F8FC] px-3 py-2">
               <p>+998</p>
               <input
