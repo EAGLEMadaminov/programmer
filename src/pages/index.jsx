@@ -58,7 +58,7 @@ export default function Home() {
           </button>
         </div>
         <div className="mx-auto text-center mt-10">
-          <p className="text-[17px]">
+          <p className="text-[17px] dark:text-black">
             Biznesingizni keyingi bosqichga olib chiqish yoki
             g&apos;oyalaringizni binzesga aylantirish haqida
             qayg&apos;uryapsizmi?
@@ -67,7 +67,7 @@ export default function Home() {
             <span className="text-[#0677E1]">Programmist.uz</span> bilan
             tanishing
           </h1>
-          <p className="text-[17px]">
+          <p className="text-[17px] dark:text-black">
             Hurmat bilan, Mijozlar muammosiga IT orqali yechim beruvchi jamoa!
           </p>
           {showModal ? <Modal /> : ""}
@@ -98,9 +98,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section id="portfolio">
+      <section id="portfolio" className="mb-[180px]">
         <div className="lg:w-[1000px] mx-auto md:mt-10">
-          <h1 className="mt-10 sm:mt-0 text-[30px] md:text-[40px] text-center font-[700]">
+          <h1 className="mt-10 sm:mt-0 text-[30px] md:text-[40px] text-center font-[700] dark:text-black">
             Bizning{" "}
             <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
               statistika
@@ -131,9 +131,9 @@ export default function Home() {
           <PortfolioSlider />
         </div>
       </section>
-      <section className="bg-white rounded-[40px] mt-20 " id="services">
+      <section className="bg-white rounded-[40px] mt-20 mb-20" id="services">
         <div className="lg:w-[1000px] md:w-[800px ] mx-auto">
-          <h1 className="text-center text-[30px] md:text-[40px] font-[700] ">
+          <h1 className="text-center text-[30px] md:text-[40px] font-[700] dark:text-black ">
             Bizning{" "}
             <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
               xizmatlar

@@ -88,11 +88,11 @@ function ProductSlider() {
         {sliderItems.map((item) => {
           return (
             <div key={item.id} className="flex mx-3 justify-between mt-8 ">
-              <div className="flex justify-center items-center bg-white w-[180px] h-[120px] rounded-[18px] mx-2">
+              <div className="flex justify-center items-center bg-white w-[180px] h-[120px] rounded-[18px] mx-2 ">
                 <Image
                   src={item.image}
                   alt="uzum foto"
-                  className="w-[120px] h-[80px] md:w-[120px] md:h-[80px] rounded-[18px]"
+                  className="w-[120px] h-[80px] md:w-[120px] md:h-[80px] rounded-[18px] "
                 />
               </div>
             </div>

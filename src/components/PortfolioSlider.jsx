@@ -79,10 +79,10 @@ function PortfolioSlider() {
               className=" projects-slider mx-auto rounded-[32px]"
             >
               <div className="sm:w-[450px]   sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
-                <p className="uppercase font-[700] ml-[50px] sm:ml-auto">
+                <p className="uppercase font-[700] ml-[50px] sm:ml-auto dark:text-black">
                   Bizning
-                  <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
-                    portfolio
+                  <span className="bg-gradient-to-r ml-1 from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
+                     portfolio
                   </span>
                 </p>
                 <h2 className="text-[25px] dark:text-black w-[300px] md:w-auto text-center mt-2 sm:text-[32px] font-[700] leading-8">
@@ -102,7 +102,7 @@ function PortfolioSlider() {
                     </a>
                     <AiOutlineRight className="text-[12px] ml-2 text-[#8C1FE2]" />
                   </button>
-                  <div className="text-center ml-[120px] sm:ml-0 sm:mr-0">
+                  <div className="text-center ml-[120px] sm:ml-0 sm:mr-0 pt-[8px] ">
                     <button
                       className="text-[12px] dark:text-black mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700"
                       onClick={() => gotoPrevBtn()}
