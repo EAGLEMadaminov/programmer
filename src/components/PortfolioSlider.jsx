@@ -66,11 +66,11 @@ function PortfolioSlider() {
     projectsSlider?.current?.slickPrev();
   };
   return (
-    <div>
+    <div className="flex">
       <Slider
         {...settings}
         ref={projectsSlider}
-        className="border rounded-[32px] bg-white w-[350px] md:w-[600px] lg:w-[1000px]"
+        className="border ml-[2%]  lg:ml-0 rounded-[32px] bg-white w-[350px] md:w-[600px] lg:w-[1000px]"
       >
         {projects.map((item) => {
           return (
@@ -85,14 +85,14 @@ function PortfolioSlider() {
                     portfolio
                   </span>
                 </p>
-                <h2 className="text-[25px] w-[300px] md:w-auto text-center mt-2 sm:text-[32px] font-[700] leading-8">
+                <h2 className="text-[25px] dark:text-black w-[300px] md:w-auto text-center mt-2 sm:text-[32px] font-[700] leading-8">
                   {item.title}
                 </h2>
                 <div className="flex">
                   <Image src={komp} alt="comp img" className="w-8 h-8 mt-2 " />
-                  <p className="mt-4"> Bizning rolimiz</p>
+                  <p className="mt-4 dark:text-black"> Bizning rolimiz</p>
                 </div>
-                <p className="mt-3 w-[280px] text-center sm:text-left sm:w-auto">
+                <p className="mt-3 w-[280px] text-center sm:text-left sm:w-auto dark:text-black">
                   {item.parag}
                 </p>
                 <div className="flex justify-between mt-8 flex-wrap  sm:flex-auto">
@@ -104,13 +104,13 @@ function PortfolioSlider() {
                   </button>
                   <div className="text-center ml-[120px] sm:ml-0 sm:mr-0">
                     <button
-                      className="text-[12px] mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700"
+                      className="text-[12px] dark:text-black mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700"
                       onClick={() => gotoPrevBtn()}
                     >
                       <AiOutlineLeft className="ml-[14px]" />
                     </button>
                     <button
-                      className="text-[12px] hover:text-white text-center w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700"
+                      className="text-[12px] dark:text-black hover:text-white text-center w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700"
                       onClick={() => gotoNextBtn()}
                     >
                       <AiOutlineRight className="ml-[14px]  font-bold" />

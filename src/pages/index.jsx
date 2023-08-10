@@ -54,7 +54,7 @@ export default function Home() {
             className="ml-7 sm:ml-0 flex items-center sm:mr-4 text-[12px] sm:text-[16px]"
           >
             <MdOutlinePhone className="mr-3" />
-            <p className="m-0">+998 91 339 99 00</p>
+            <p className="m-0 dark:text-black">+998 91 339 99 00</p>
           </button>
         </div>
         <div className="mx-auto text-center mt-10">
@@ -106,9 +106,11 @@ export default function Home() {
               statistika
             </span>{" "}
           </h1>
-          <div className="flex justify-center mt-8 flex-wrap">
-            <div className="bg-white border w-[150px] sm:w-[280px] rounded-[18px]  text-center h-[150px]">
-              <h2 className="text-[30px] sm:text-[40px] font-[700] mt-8">3+</h2>
+          <div className="flex justify-center mt-8 flex-wrap dark:text-black">
+            <div className="bg-white  border w-[150px] sm:w-[280px] rounded-[18px]  text-center h-[150px]">
+              <h2 className="text-[30px] sm:text-[40px] font-[700] mt-8 ">
+                3+
+              </h2>
               <p>Yillik tajriba</p>
             </div>
             <div className="bg-white border w-[150px] sm:w-[280px] rounded-[18px]  mx-5 text-center h-[150px]">
@@ -137,9 +139,9 @@ export default function Home() {
               xizmatlar
             </span>{" "}
           </h1>
-          <div className="flex flex-wrap mx-auto justify-center text-center">
+          <div className="flex flex-wrap mx-auto justify-center text-center dark:text-black">
             <div className="w-[150px] sm:w-[300px] h-[150px] sm:h-[200px] flex flex-col items-center justify-center bg-[#F8FBFE] m-2 rounded-[18px] border">
-              <div className="w-20 h-20 rounded-[80px] bg-[#ECEBFC] place-items-center flex justify-center">
+              <div className="w-20 h-20 rounded-[80px]  bg-[#ECEBFC] place-items-center flex justify-center">
                 <Image className="" src={saytlar} alt="saytlar" />
               </div>
               <p className="mt-2">Vebsayt yaratish</p>
@@ -186,15 +188,15 @@ export default function Home() {
       </section>
       <section id="founders">
         <div className=" md:w-[1000px] mx-auto mt-10 md:mt-[150px]">
-          <h1 className="text-center text-[30px]  md:text-[40px] font-[700] ">
+          <h1 className="text-center text-[30px]  md:text-[40px] font-[700] dark:text-black">
             Bizning{" "}
             <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
               hamkorlar
             </span>{" "}
           </h1>
           <Slider />
-          <div className="mt-20 flex flex-wrap  justify-center ">
-            <h2 className="text-[30px] md:text-[40px] text-center w-[300px] sm:w-[400px] md:w-[500px] lg:w-[400px] font-[700]">
+          <div className="mt-20 flex flex-wrap dark:text-black  justify-center ">
+            <h2 className="text-[30px]  md:text-[40px] text-center w-[300px] sm:w-[400px] md:w-[500px] lg:w-[400px] font-[700]">
               Eng ko&apos;p beriladigan{" "}
               <span className="text-[#8C1FE2] ">savollar</span>{" "}
             </h2>
@@ -205,7 +207,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="md:w-[1000px] mx-auto md:h-[300px] flex-wrap justify-around bg-white rounded-[40px] flex">
+      <footer className="md:w-[1000px] dark:text-black mx-auto md:h-[300px] flex-wrap justify-around bg-white rounded-[40px] flex">
         <div className="mt-10">
           <Image src={Goal} alt="business goal" />
         </div>
@@ -232,13 +234,13 @@ export default function Home() {
           <Image src={Tools} alt="repair tools" />
         </div>
       </footer>
-      <h1 className="text-center text-[25px] md:text-[30px] font-[700]">
+      <h1 className="text-center text-[25px] dark:text-black md:text-[30px] font-[700]">
         Biz bilan{" "}
         <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
           bog&apos;lanish
         </span>
       </h1>
-      <div className="mt-10 w-[300px] text-center flex-wrap rounded-[30px] mb-4 md:w-[800px] lg:w-[1000px] justify-between py-2 mx-auto  flex bg-white items-center">
+      <div className="dark:text-black  w-[300px] mt-10 text-center flex-wrap rounded-[30px] pb-4 md:w-[800px] lg:w-[1000px] justify-between py-2 mx-auto  flex items-center">
         <a
           href=" https://t.me/programmist_outsource"
           className="flex items-center"

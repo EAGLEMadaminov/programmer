@@ -25,7 +25,7 @@ function Accordion() {
       text: "Dasturning murakkabligiga qarab har xil vaqt oladi. O’rtacha 2 haftadan 3 oy atrofida",
     },
   ];
-  
+
   return (
     <div>
       {" "}
@@ -44,7 +44,7 @@ function Accordion() {
                 }}
                 className="border bg-[#F2F0FD] text-[#0677E1] px-2 mr-1 w-8 h-8 mx-2 rounded-[40px]"
               >
-                <HiChevronDown className=" mt-1  " />
+                <HiChevronDown className="mt-1" />
               </button>
               <h3 className="text-[20px] w-[350px] md:w-auto">{item.title}</h3>
             </div>

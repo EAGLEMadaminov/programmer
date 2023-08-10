@@ -92,7 +92,7 @@ function ProductSlider() {
                 <Image
                   src={item.image}
                   alt="uzum foto"
-                  className="w-[120px] h-[80px] md:w-[180px] md:h-[120px] rounded-[18px]"
+                  className="w-[120px] h-[80px] md:w-[120px] md:h-[80px] rounded-[18px]"
                 />
               </div>
             </div>
