@@ -55,7 +55,7 @@ export default function Home() {
           </ul>
           <p
             className={`ml-auto text-black text-[24px]  md:text-[0px] mr-2`}
-            onClick={()=>setShowHeadModal(true)}
+            onClick={() => setShowHeadModal(true)}
           >
             &#9776;
           </p>
@@ -63,7 +63,7 @@ export default function Home() {
             type="tell"
             className="ml-7 hidden sm:ml-0 md:flex items-center sm:mr-4 text-[12px] sm:text-[16px]"
           >
-            <MdOutlinePhone className="mr-3" />
+            <MdOutlinePhone className="mr-3 text-black" />
             <p className="m-0 dark:text-black hidden md:block ">
               +998 91 339 99 00
             </p>
