@@ -18,9 +18,13 @@ import Modal from "@/components/modal";
 import { useGlobalContext } from "../context";
 import Accordion from "@/components/Accordion";
 import PortfolioSlider from "@/components/PortfolioSlider";
+import { useState } from "react";
+import HeadModal from "@/components/HeadModal";
 
 export default function Home() {
-  const { showModal, setShowModal } = useGlobalContext();
+  const [rotate, setRotate] = useState("0");
+  const { showModal, setShowModal, showHeadModal, setShowHeadModal } =
+    useGlobalContext();
   return (
     <div className="bg-[#F9FBFC] scroll-smooth w-full">
       <Head>
@@ -31,7 +35,7 @@ export default function Home() {
       </Head>
       <div className="w-[300px] md:w-[800px] lg:w-[1000px] mx-auto pt-5">
         <div className="flex border  border-[#D7E0E8] rounded-[30px] sm:items-center p-2">
-          <Image src={Logo} alt="logo img" className="w-[100px] md:w-auto" />
+          <Image src={Logo} alt="logo img" className="w-[150px] md:w-auto" />
           <ul className="lg:flex mx-auto text-[17px] md:flex hidden m-0">
             <li className="mx-[20px] ">
               <a className=" text-black" href="#portfolio">
@@ -49,31 +53,42 @@ export default function Home() {
               </a>
             </li>
           </ul>
+          <p
+            className={`ml-auto text-black text-[24px]  md:text-[0px] mr-2`}
+            onClick={()=>setShowHeadModal(true)}
+          >
+            &#9776;
+          </p>
           <button
             type="tell"
-            className="ml-7 sm:ml-0 flex items-center sm:mr-4 text-[12px] sm:text-[16px]"
+            className="ml-7 hidden sm:ml-0 md:flex items-center sm:mr-4 text-[12px] sm:text-[16px]"
           >
             <MdOutlinePhone className="mr-3" />
-            <p className="m-0 dark:text-black">+998 91 339 99 00</p>
+            <p className="m-0 dark:text-black hidden md:block ">
+              +998 91 339 99 00
+            </p>
           </button>
         </div>
+        {showHeadModal ? <HeadModal /> : ""}
         <div className="mx-auto text-center mt-10">
-          <p className="text-[17px] dark:text-black">
+          <p className="text-[17px] dark:text-[rgba(0,0,0,0.6)]">
             Biznesingizni keyingi bosqichga olib chiqish yoki
             g&apos;oyalaringizni binzesga aylantirish haqida
             qayg&apos;uryapsizmi?
           </p>
-          <h1 className="text-[#0D0C0F] text-[40px] md:text-[60px]">
-            <span className="text-[#0677E1]">Programmist.uz</span> bilan
-            tanishing
+          <h1 className="text-[#0D0C0F] text-[40px] md:text-[60px] font-[700] leading-[50px] md:leading-[70px] ">
+            <span className="bg-gradient-to-r from-[#0677E1] to-[#0a61b3]  bg-clip-text text-transparent">
+              Programmist.uz
+            </span>{" "}
+            bilan tanishing
           </h1>
-          <p className="text-[17px] dark:text-black">
+          <p className="text-[17px] mt-2 dark:text-[rgba(0,0,0,0.6)]">
             Hurmat bilan, Mijozlar muammosiga IT orqali yechim beruvchi jamoa!
           </p>
           {showModal ? <Modal /> : ""}
           <button
             onClick={() => setShowModal(true)}
-            className="mt-3 bg-[#0677E1] rounded-xl px-[60px] py-[14px] text-white bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]"
+            className="mt-5 bg-[#0677E1] rounded-xl px-[60px] py-[14px] text-white bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]"
           >
             Bepul konsultatsiya olish
           </button>
@@ -83,7 +98,7 @@ export default function Home() {
               alt="maket1"
               className="w-[300px] md:w-[650px] md:h-[550px]"
             />
-            <div className="reletive flex">
+            <div className="reletive flex  mx-auto">
               <Image
                 alt="maket2"
                 src={portfoli2}
@@ -92,34 +107,34 @@ export default function Home() {
               <Image
                 alt="maket3"
                 src={maket3}
-                className="w-[200px] sm:w-[300px] right-[85px] z-[0] absolute md:right-[100px] mt-[20px] md:h-[520px]"
+                className="w-[200px] sm:w-[300px] ml-[50px] md:ml-[70px] z-[0] absolute  mt-[20px] md:h-[520px]"
               />
             </div>
           </div>
         </div>
       </div>
       <section id="portfolio" className="mb-[180px]">
-        <div className="lg:w-[1000px] mx-auto md:mt-10">
+        <div className="lg:w-[1000px]  mx-auto md:mt-10">
           <h1 className="mt-10 sm:mt-0 text-[30px] md:text-[40px] text-center font-[700] dark:text-black">
             Bizning{" "}
             <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
               statistika
             </span>{" "}
           </h1>
-          <div className="flex justify-center mt-8 flex-wrap dark:text-black">
-            <div className="bg-white  border w-[150px] sm:w-[280px] rounded-[18px]  text-center h-[150px]">
+          <div className="flex justify-center w-[320px] md:w-auto mx-auto mt-8 flex-wrap dark:text-black">
+            <div className="bg-white ml-[10px] w-[135px] sm:w-[280px] rounded-[18px] text-center h-[150px] box-shadow">
               <h2 className="text-[30px] sm:text-[40px] font-[700] mt-8 ">
                 3+
               </h2>
               <p>Yillik tajriba</p>
             </div>
-            <div className="bg-white border w-[150px] sm:w-[280px] rounded-[18px]  mx-5 text-center h-[150px]">
+            <div className="bg-white w-[135px] sm:w-[280px] rounded-[18px]  mx-5 text-center h-[150px] box-shadow">
               <h2 className="text-[30px] sm:text-[40px] font-[700] mt-8">
                 13 +
               </h2>
               <p>Loyihalar</p>
             </div>
-            <div className="mt-4 lg:mt-0 bg-white border w-[320px] sm:w-[280px] rounded-[18px]  text-center h-[150px]">
+            <div className="mt-4 lg:mt-0 bg-white w-[300px] sm:w-[280px] rounded-[18px]  text-center h-[150px] box-shadow">
               <h2 className="text-[30px] sm:text-[40px] font-[700] mt-8">
                 13 +
               </h2>
@@ -131,7 +146,10 @@ export default function Home() {
           <PortfolioSlider />
         </div>
       </section>
-      <section className="bg-white rounded-[40px] mt-20 mb-20 py-10" id="services">
+      <section
+        className="bg-white rounded-[40px] mt-20 mb-20 py-10"
+        id="services"
+      >
         <div className="lg:w-[1000px] md:w-[800px ] mx-auto ">
           <h1 className="text-center text-[30px] md:text-[40px] font-[700] dark:text-black ">
             Bizning{" "}
@@ -188,17 +206,17 @@ export default function Home() {
       </section>
       <section id="founders">
         <div className=" md:w-[1000px] mx-auto mt-10 md:mt-[150px]">
-          <h1 className="text-center text-[30px]  md:text-[40px] font-[700] dark:text-black">
-            Bizning{" "}
+          <h1 className="ml-1 md:text-center text-[25px]  md:text-[40px] font-[700] dark:text-black">
+            Bizning
             <span className="bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
               hamkorlar
-            </span>{" "}
+            </span>
           </h1>
           <Slider />
           <div className="mt-20 flex flex-wrap dark:text-black  justify-center ">
-            <h2 className="text-[30px]  md:text-[40px] text-center w-[300px] sm:w-[400px] md:w-[500px] lg:w-[400px] font-[700]">
-              Eng ko&apos;p beriladigan{" "}
-              <span className="text-[#8C1FE2] ">savollar</span>{" "}
+            <h2 className="text-[25px] text-center md:text-left md:text-[35px] leading-10 w-full sm:w-[400px] md:w-[500px] lg:w-[400px] font-[700]">
+              Eng ko&apos;p beriladigan
+              <span className="text-[#8C1FE2] ml-1 ">savollar</span>
             </h2>
             <div>
               <Accordion />
@@ -208,8 +226,12 @@ export default function Home() {
       </section>
 
       <footer className="md:w-[1000px] dark:text-black mx-auto md:h-[300px] flex-wrap justify-around bg-white rounded-[40px] flex">
-        <div className="mt-10">
-          <Image src={Goal} alt="business goal" />
+        <div className="mt-20">
+          <Image
+            src={Goal}
+            alt="business goal"
+            className="min-w-20 min-h-20 w-[120px] h-[120px] md:w-[150px] md:h-[150px]"
+          />
         </div>
         <div className="w-[300px] md:w-[500px] flex flex-col justify-center items-center">
           <h2 className="text-[30px] md:text-[50px] font-[700]  ">

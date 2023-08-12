@@ -66,11 +66,11 @@ function PortfolioSlider() {
     projectsSlider?.current?.slickPrev();
   };
   return (
-    <div className="flex">
+    <div className="flex box-shadow">
       <Slider
         {...settings}
         ref={projectsSlider}
-        className="border ml-[2%]  lg:ml-0 rounded-[32px] bg-white w-[350px] md:w-[600px] lg:w-[1000px]"
+        className=" ml-[2%]  lg:ml-0 rounded-[32px] bg-white w-[350px] md:w-[600px] lg:w-[1000px] statistiks"
       >
         {projects.map((item) => {
           return (
@@ -78,31 +78,35 @@ function PortfolioSlider() {
               key={item.id}
               className=" projects-slider mx-auto rounded-[32px]"
             >
-              <div className="sm:w-[450px]   sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
+              <div className="sm:w-[450px]  sm:text-left px-3 md:ml-[70px] sm:mt-[70px] mt-[40px]">
                 <p className="uppercase font-[700] ml-[50px] sm:ml-auto dark:text-black">
                   Bizning
                   <span className="bg-gradient-to-r ml-1 from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
-                     portfolio
+                    portfolio
                   </span>
                 </p>
-                <h2 className="text-[25px] dark:text-black w-[300px] md:w-auto text-center mt-2 sm:text-[32px] font-[700] leading-8">
+                <h2 className="text-[25px] dark:text-black w-[300px] md:w-auto  mt-2 font-[700] leading-8">
                   {item.title}
                 </h2>
-                <div className="flex">
+                <div className="flex mt-3">
                   <Image src={komp} alt="comp img" className="w-8 h-8 mt-2 " />
                   <p className="mt-4 dark:text-black"> Bizning rolimiz</p>
                 </div>
                 <p className="mt-3 w-[280px] text-center sm:text-left sm:w-auto dark:text-black">
                   {item.parag}
                 </p>
-                <div className="flex justify-between mt-8 flex-wrap  sm:flex-auto">
-                  <button className="flex ml-20 sm:ml-5 w-[350px]  text-center sm:w-auto  font-[600] items-center rounded-xl bg-[#F0F4F8] py-[14px] px-5 bg-gradient-to-r from-[#0677E1] to-[#8C1FE2]  bg-clip-text text-transparent">
-                    <a href={item.link} target="blank">
+                <div className="btn from-left flex justify-between mt-8 flex-wrap  sm:flex-auto">
+                  <div className="flex ml-14  sm:ml-5 w-[350px] text-center  sm:w-auto  font-[600] items-center rounded-xl  hover:bg-gradient-to-r hover:from-[#0677E1] hover:to-[#8C1FE2] hover:text-white">
+                    <a
+                      href={item.link}
+                      target="blank"
+                      className="py-[10px] flex px-5 hover:text-white  bg-gradient-to-r from-[#0677E1] to-[#8C1FE2] bg-clip-text text-transparent"
+                    >
                       Loyihani ko&apos;rish
+                      <AiOutlineRight className="text-[12px] text-[#807fac] mt-3 ml-2" />
                     </a>
-                    <AiOutlineRight className="text-[12px] ml-2 text-[#8C1FE2]" />
-                  </button>
-                  <div className="text-center ml-[120px] sm:ml-0 sm:mr-0 pt-[8px] ">
+                  </div>
+                  <div className="text-center ml-[100px] sm:ml-0 sm:mr-0 pt-[8px] ">
                     <button
                       className="text-[12px] dark:text-black mr-4 hover:text-white w-10 h-10 rounded-[40px] hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-700"
                       onClick={() => gotoPrevBtn()}

@@ -7,9 +7,15 @@ function Modal() {
   const { setShowModal } = useGlobalContext();
   const [sendForm, setSendFrom] = useState(false);
   return (
-    <div className="w-full z-[5] fixed top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.7)] h-[100vh]">
+    <div
+      onClick={() => setShowModal(false)}
+      className="w-full z-[5] fixed top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.7)] h-[100vh]"
+    >
       {!sendForm ? (
-        <div className="bg-white w-[400px] mt-[50px] rounded-[24px] p-10 mx-auto h-[500px]">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="bg-white w-[400px] top-[50%] left-[50%] tarnsformOrigin absolute  origin-center rounded-[24px] p-10 mx-auto h-[500px]"
+        >
           <div className="flex justify-between">
             <h2 className="text-[30px]  dark:text-black">
               Bepul{" "}
@@ -61,7 +67,10 @@ function Modal() {
           </form>
         </div>
       ) : (
-        <div className="bg-white w-[400px] text-center mt-[70px] rounded-[24px] p-10 mx-auto h-[430px]">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="bg-white w-[400px] text-center top-[50%] left-[50%] tarnsformOrigin absolute  rounded-[24px] p-10 mx-auto h-[430px]"
+        >
           <Image src={feedback} alt="feed back " className="mx-auto" />
           <h2 className="text-[30px] font-[700] dark:text-black">
             Muvaffaqiyatli{" "}

@@ -33,7 +33,7 @@ function Accordion() {
         return (
           <div
             key={index}
-            className="rounded-[18px] mx-2 pt-2 w-[350px] md:w-[500px] bg-white min-h-[50px] my-2 items-center "
+            className="rounded-[18px] mx-2 pt-2 w-[350px] md:w-[500px] bg-white min-h-[50px] my-3 items-center "
           >
             <div className="flex mx-auto w-[350px] md:w-full">
               <button
